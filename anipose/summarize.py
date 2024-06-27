@@ -74,7 +74,7 @@ def make_summarize_fun(get_fnames_session, output_fname, h5=False):
 
         os.makedirs(outdir, exist_ok=True)
 
-        outname = os.path.join(outdir, output_fname)
+        outname = os.path.join(outdir, config['date']+'_'+config['ani']+'_'+output_fname)
 
         print('Saving output...')
         dout.to_csv(outname, index=False)
